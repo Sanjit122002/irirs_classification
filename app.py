@@ -53,3 +53,24 @@ st.write(f"Species: {target_names[prediction][0]}")
 st.write("Prediction Probability:")
 for i, species in enumerate(target_names):
     st.write(f"{species}: {prediction_proba[0][i]:.2f}")
+def add_footer():
+    footer = """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        color: black;
+        text-align: center;
+        padding: 10px;
+    }
+    </style>
+    <div class="footer">
+        <p>Developed By Sanjit using Streamlit | <p>Contact: <a href="mailto:@gmail.com">sanjitkumaryadav561@gmail.com</a></p></p>
+    </div>
+    """
+    st.markdown(footer, unsafe_allow_html=True)
+
+add_footer()
